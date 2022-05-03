@@ -5,9 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ciclos PHP</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Ver la consola</h1>
+    <form id="ciclo" action="api.php" method="post">
+        <label for="inicio">Inicio del ciclo</label>
+        <input id="inicio" type="number" max="100" min="0" required value="0"></input>
+        <label for="final">Final del ciclo</label>
+        <input id="final" type="number" max="100" min="1" required value="100"></input>
+        <label for="avance">avance</label>
+        <input id="avance" type="number" max="100" min="1" required value="1"></input>
+    </form>
+    <input type="submit" form="ciclo" value="Iniciar incremento" data-boton="iniciarCiclo"></input>
+    <input type="submit" form="ciclo" value="Iniciar decremento" data-boton="iniciarCiclo2"></input>
+    <div class="mensaje">
+
+    </div>
     <script src="main.js"></script>
 </body>
 </html>
